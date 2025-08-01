@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Status – Verification.bot</title>
+  <meta name="description" content="Check if Verification.bot is currently online or offline." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5C6AC4',
+            dark: '#0e1014',
+            grayish: '#1a1c22',
+            green: '#22c55e',
+            red: '#ef4444',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-dark text-white font-sans flex items-center justify-center min-h-screen px-4">
+
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-4">Verification.bot Status</h1>
+    <p class="text-gray-400 mb-8">This page shows the current status of the bot.</p>
+
+    <div id="statusBox" class="text-xl font-medium p-6 rounded-lg shadow-md bg-grayish inline-block animate-pulse">
+      Checking status...
+    </div>
+
+    <div class="mt-10 text-sm text-gray-500">
+      <a href="/" class="hover:underline">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    fetch('/api/status')
+      .then(res => res.json())
+      .then(data => {
+        const box = document.getElementById('statusBox');
+        const status = data.status?.toLowerCase();
+        if (status === 'online') {
+          box.textContent = '✅ Bot is Online';
+          box.classList.remove('animate-pulse');
+          box.classList.add('bg-green', 'text-black');
+        } else {
+          box.textContent = '❌ Bot is Offline';
+          box.classList.remove('animate-pulse');
+          box.classList.add('bg-red', 'text-white');
+        }
+      })
+      .catch(err => {
+        document.getElementById('statusBox').textContent = '⚠️ Unable to fetch status';
+      });
+  </script>
+</body>
+</html>
