@@ -1,22 +1,139 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Verification.bot — AI Discord Verification</title><meta name="description" content="AI-powered Discord verification bot — seamless, secure, and tough on bots."/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']},colors:{primary:'#5C6AC4',dark:'#0e1014',grayish:'#1a1c22',online:'#22c55e',offline:'#ef4444'},animation:{float:'float 6s ease-in-out infinite',fadeInUp:'fadeInUp .8s ease-out forwards'},keyframes:{float:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-8px)'}},fadeInUp:{from:{opacity:0,transform:'translateY(30px)'},to:{opacity:1,transform:'translateY(0)'}}}}}</script>
-<style>.card-glass{background:rgba(30,30,34,0.6);backdrop-filter:blur(10px);border-radius:1rem;}@keyframes moveGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.bg-animated{background:linear-gradient(270deg,#15181d,#1e2025,#1a1c22,#15181d);background-size:600% 600%;animation:moveGradient 20s ease infinite;}</style>
-</head><body class="bg-dark text-white">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Verification.bot - AI Discord Verification</title>
+    <meta name="description" content="AI-powered Discord verification bot to block raids, fake users, and spam. Fast, accurate, and secure.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#0f0f14",
+              surface: "#18181f",
+              primary: "#7c3aed",
+              accent: "#10b981"
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"]
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(120deg, #1e1e2f, #14141c);
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-white gradient-bg">
 
-<header class="fixed top-0 w-full bg-grayish/80 backdrop-blur-md py-4 px-6 flex justify-between items-center z-50"><h1 class="text-2xl font-bold">Verification.bot</h1><nav class="hidden lg:flex gap-8 text-sm"><a href="#features" class="hover:text-primary">Features</a><a href="#how" class="hover:text-primary">How It Works</a><a href="#faq" class="hover:text-primary">FAQ</a><a href="/status" class="hover:text-primary">Status</a></nav><a href="#" class="hidden lg:inline-block bg-primary px-5 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">Invite</a></header>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full px-6 py-4 backdrop-blur bg-surface/80 border-b border-white/5 z-50 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">Verification.bot</h1>
+      <nav class="hidden md:flex space-x-6 text-sm text-gray-300">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#how" class="hover:text-white">How it Works</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="/status" class="hover:text-white">Status</a>
+      </nav>
+      <a href="#" class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-md hover:opacity-90">Invite</a>
+    </header>
 
-<main>
-<section class="min-h-screen flex items-center justify-center text-center pt-28 bg-animated"><div class="max-w-lg mx-auto animate-fadeInUp"><h2 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">AI‑Powered Discord Verification</h2><p class="text-lg text-gray-300 mb-8">The only verification bot you'll ever need — secure, fast, and unstoppable bots.</p><a href="#" class="bg-primary text-dark inline-block px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition shadow-lg">Invite</a></div></section>
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center text-center px-6 pt-40">
+      <div class="max-w-3xl">
+        <h2 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight">
+          Stop Bots.<br><span class="text-primary">Verify Humans.</span>
+        </h2>
+        <p class="text-gray-300 text-lg mb-8">
+          The most powerful AI Discord verification system. Block raids, fake accounts, and spam — instantly and intelligently.
+        </p>
+        <a href="#" class="bg-accent px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition">Add to Server</a>
+      </div>
+    </section>
 
-<section id="features" class="py-20 px-6"><div class="max-w-6xl mx-auto text-center"><h3 class="text-3xl font-bold mb-8">Why Choose Verification.bot?</h3><div class="grid md:grid-cols-3 gap-10 text-left"><div class="bg-grayish p-6 rounded-xl"><h4 class="text-xl font-semibold mb-3">🧠 AI Detection</h4><p class="text-gray-400">Advanced behavioral and pattern analysis to stop bots before they reach your server.</p></div><div class="bg-grayish p-6 rounded-xl"><h4 class="text-xl font-semibold mb-3">🔒 Role Lockdown</h4><p class="text-gray-400">@everyone can't enter until they verify; bypassers are kicked.</p></div><div class="bg-grayish p-6 rounded-xl"><h4 class="text-xl font-semibold mb-3">⚡ Auto‑Kick Fails</h4><p class="text-gray-400">Automatically kick users who fail verification — instantly and silently.</p></div></div></div></section>
+    <!-- Features -->
+    <section id="features" class="py-24 px-6 bg-surface">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12 text-center">Features That Protect</h3>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="bg-dark p-6 rounded-lg shadow hover:shadow-xl transition">
+            <h4 class="text-xl font-semibold mb-3">🧠 AI-Powered Detection</h4>
+            <p class="text-gray-400">Behavior analysis to detect bots by typing, reaction timing, and interaction patterns.</p>
+          </div>
+          <div class="bg-dark p-6 rounded-lg shadow hover:shadow-xl transition">
+            <h4 class="text-xl font-semibold mb-3">🔒 Role-Based Lockdown</h4>
+            <p class="text-gray-400">@everyone has zero access until verified. One-click lockdown setup via slash command.</p>
+          </div>
+          <div class="bg-dark p-6 rounded-lg shadow hover:shadow-xl transition">
+            <h4 class="text-xl font-semibold mb-3">⚡ Auto-Kick Failures</h4>
+            <p class="text-gray-400">Users who fail or timeout are instantly kicked. No spam. No drama. No problem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="how" class="py-20 bg-[#1a1c22]/70 px-6"><div class="max-w-6xl mx-auto text-center"><h3 class="text-3xl font-bold mb-8">How It Works</h3><div class="grid md:grid-cols-3 gap-8"><div class="bg-[#202027] card-glass p-6 hover:shadow-xl transition"><div class="text-5xl text-primary mb-4">1</div><h5 class="font-semibold mb-2">Run <code>/setup</code></h5><p class="text-gray-300">Select channel & role — bot does the rest.</p></div><div class="bg-[#202027] card-glass p-6 hover:shadow-xl transition"><div class="text-5xl text-primary mb-4">2</div><h5 class="font-semibold mb-2">Users Verify</h5><p class="text-gray-300">Challenge via AI interaction to ensure humanity.</p></div><div class="bg-[#202027] card-glass p-6 hover:shadow-xl transition"><div class="text-5xl text-primary mb-4">3</div><h5 class="font-semibold mb-2">Access Granted</h5><p class="text-gray-300">Real users are given access — bots or bots proxies are removed.</p></div></div></div></section>
+    <!-- How It Works -->
+    <section id="how" class="py-24 px-6 bg-dark">
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-12">How It Works</h3>
+        <div class="grid md:grid-cols-3 gap-10 text-left">
+          <div>
+            <div class="text-primary text-3xl font-bold mb-2">1</div>
+            <h4 class="text-xl font-semibold mb-2">Run `/setup`</h4>
+            <p class="text-gray-400">Choose your verified role and verification channel. The bot does the rest.</p>
+          </div>
+          <div>
+            <div class="text-primary text-3xl font-bold mb-2">2</div>
+            <h4 class="text-xl font-semibold mb-2">User Starts Verification</h4>
+            <p class="text-gray-400">Our AI detects real vs fake behavior, blocks spam, flags suspicious accounts.</p>
+          </div>
+          <div>
+            <div class="text-primary text-3xl font-bold mb-2">3</div>
+            <h4 class="text-xl font-semibold mb-2">Access or Kick</h4>
+            <p class="text-gray-400">Verified users get the role. Fakes get kicked. No mod involvement needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="faq" class="py-16 px-6"><div class="max-w-xl mx-auto space-y-6"><h3 class="text-3xl font-bold mb-6 text-center">FAQ</h3><div><h6 class="text-xl font-semibold">Is it free?</h6><p class="text-gray-300">Core AI verification is free. Premium adds deeper logs & analytics.</p></div><div><h6 class="text-xl font-semibold">Can users bypass it?</h6><p class="text-gray-300">No. Verification requires explicit action; AI blocks bots/macro/spoof.</p></div><div><h6 class="text-xl font-semibold">What AI is used?</h6><p class="text-gray-300">Behavioral models detect fake accounts, automation, and anomalies.</p></div></div></section>
-</main>
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-6 bg-surface">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10 text-center">Frequently Asked</h3>
+        <div class="space-y-6">
+          <div>
+            <h5 class="text-lg font-semibold">Is this free?</h5>
+            <p class="text-gray-400">Yes. Core verification is free. Premium unlocks advanced analytics and logs.</p>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold">How secure is it?</h5>
+            <p class="text-gray-400">It's one of the most secure systems, detecting even macro and scripted attacks.</p>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold">Can users bypass?</h5>
+            <p class="text-gray-400">No. They must interact with the system or be kicked automatically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer class="bg-[#1a1c22] py-6 text-center text-gray-400 text-sm"><p>© 2025 Verification.bot. All rights reserved.</p><div class="mt-2 space-x-4"><a href="https://x.com/DiscordVerification">Twitter</a><a href="https://github.com/DiscordVerification">GitHub</a><a href="https://discord.gg/k39Z4dnPnU">Discord</a></div></footer>
+    <!-- Footer -->
+    <footer class="py-10 bg-dark text-center text-sm text-gray-500">
+      <p>© 2025 Verification.bot</p>
+      <div class="mt-4 space-x-4">
+        <a href="https://x.com/DiscordVerification" class="hover:text-white">Twitter</a>
+        <a href="https://github.com/DiscordVerification" class="hover:text-white">GitHub</a>
+        <a href="https://discord.gg/k39Z4dnPnU" class="hover:text-white">Discord</a>
+      </div>
+    </footer>
 
-</body></html>
+  </body>
+</html>
