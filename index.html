@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-background scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verification.bot</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8189/8189749.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -13,48 +14,68 @@
             background: '#0f0f1a',
             surface: '#15151f',
             primary: '#00f5a0',
-            accent: '#00ffd1'
+            accent: '#00ffd1',
           }
         }
       }
     };
   </script>
+  <style>
+    html, body {
+      background-color: #0f0f1a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body class="text-white font-sans">
+<body>
 
   <!-- 🌟 Hero Section -->
-  <section class="min-h-screen bg-background flex flex-col justify-center items-center text-center px-6 py-24">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">Secure Your Server<br><span class="text-primary">with AI Verification</span></h1>
-    <p class="text-gray-400 max-w-2xl mb-8">Verification.bot uses advanced AI to keep your Discord community bot-free, raid-free, and human-only.</p>
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 fade-up">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Stop Raids. Start Securing.<br><span class="text-primary">With AI Verification</span></h1>
+    <p class="text-gray-400 max-w-2xl mb-8">Protect your Discord community from bots, raids, and alt accounts — automatically.</p>
     <div class="flex flex-col sm:flex-row gap-4">
-      <a href="https://discord.com/oauth2/authorize?client_id=YOUR_ID&scope=bot+applications.commands&permissions=8" class="bg-primary text-black px-6 py-3 rounded font-semibold hover:scale-105 transition">Add to Discord</a>
+      <a href="#" class="bg-primary text-black px-6 py-3 rounded font-semibold hover:scale-105 transition">Add to Discord</a>
       <a href="#how-it-works" class="border border-primary text-primary px-6 py-3 rounded hover:bg-primary hover:text-black transition">How It Works</a>
     </div>
   </section>
 
   <!-- ✨ Features -->
-  <section class="bg-surface py-20 px-6">
+  <section class="bg-surface py-20 px-6 fade-up">
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="w-16 mx-auto mb-4" />
+        <img src="https://cdn-icons-png.flaticon.com/512/11151/11151052.png" class="w-16 mx-auto mb-4" />
         <h3 class="text-xl font-semibold mb-2">AI Detection</h3>
-        <p class="text-gray-400">Automatically detects suspicious behavior using AI signals.</p>
+        <p class="text-gray-400">Advanced AI stops bots before they enter your server.</p>
       </div>
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/639/639365.png" class="w-16 mx-auto mb-4" />
+        <img src="https://cdn-icons-png.flaticon.com/512/3163/3163844.png" class="w-16 mx-auto mb-4" />
         <h3 class="text-xl font-semibold mb-2">Kick Unverified</h3>
-        <p class="text-gray-400">Non-humans and users who fail are auto-kicked on join.</p>
+        <p class="text-gray-400">Users who fail verification are automatically kicked.</p>
       </div>
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/9746/9746123.png" class="w-16 mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Instant Setup</h3>
-        <p class="text-gray-400">Run <code>/setup</code> and your server is protected in seconds.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" class="w-16 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">1-Click Setup</h3>
+        <p class="text-gray-400">Run <code>/setup</code> and lock down your server in seconds.</p>
       </div>
     </div>
   </section>
 
-  <!-- 👣 How It Works -->
-  <section id="how-it-works" class="bg-background py-24 px-6">
+  <!-- 📚 How It Works -->
+  <section id="how-it-works" class="py-24 px-6 fade-up">
     <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
       <div class="space-y-8">
@@ -62,69 +83,64 @@
           <div class="bg-primary text-black w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
           <div>
             <h3 class="text-xl font-semibold">Invite the bot</h3>
-            <p class="text-gray-400">Click “Add to Discord” and give the required permissions.</p>
+            <p class="text-gray-400">Click "Add to Discord" and give permissions.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="bg-primary text-black w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
           <div>
-            <h3 class="text-xl font-semibold">Run /setup</h3>
-            <p class="text-gray-400">Select a verification channel and verified role.</p>
+            <h3 class="text-xl font-semibold">Run <code>/setup</code></h3>
+            <p class="text-gray-400">Choose a verification channel and role.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="bg-primary text-black w-10 h-10 rounded-full flex items-center justify-center font-bold">3</div>
           <div>
-            <h3 class="text-xl font-semibold">AI-powered challenge</h3>
-            <p class="text-gray-400">Users go through an AI-backed captcha + typing test.</p>
+            <h3 class="text-xl font-semibold">Users Verify</h3>
+            <p class="text-gray-400">They must pass a test to access the server.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="bg-primary text-black w-10 h-10 rounded-full flex items-center justify-center font-bold">4</div>
           <div>
-            <h3 class="text-xl font-semibold">Done ✅</h3>
-            <p class="text-gray-400">Verified users get access, others are instantly kicked.</p>
+            <h3 class="text-xl font-semibold">Access Granted</h3>
+            <p class="text-gray-400">Verified = unlocked access. Others = kicked.</p>
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-center">
-        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" class="w-64 h-auto opacity-90" alt="AI Verification illustration" />
+      <div class="flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/5470/5470616.png" class="w-64 h-auto" />
       </div>
     </div>
   </section>
 
-  <!-- 📊 Comparison -->
-  <section class="bg-surface text-white py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">How We Compare</h2>
-    <div class="max-w-5xl mx-auto overflow-x-auto">
-      <table class="w-full text-left border-separate border-spacing-y-4">
-        <thead class="text-sm uppercase text-gray-400">
+  <!-- 📊 Comparison Graph -->
+  <section class="bg-surface py-20 px-6 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">Why We're Better</h2>
+    <div class="overflow-x-auto max-w-5xl mx-auto">
+      <table class="w-full text-left border-separate border-spacing-y-4 text-sm md:text-base">
+        <thead class="uppercase text-gray-400">
           <tr>
             <th class="px-4">Feature</th>
             <th class="px-4">Verification.bot</th>
-            <th class="px-4">Typical Bot</th>
+            <th class="px-4">Others</th>
           </tr>
         </thead>
         <tbody class="text-md">
-          <tr class="bg-background rounded-lg">
+          <tr class="bg-background">
             <td class="px-4 py-3">AI Detection</td>
-            <td class="px-4 text-accent font-semibold">✅ Yes</td>
-            <td class="px-4 text-gray-500">❌ No</td>
+            <td class="px-4 text-green-400 font-bold">✔ Yes</td>
+            <td class="px-4 text-gray-500">✘ No</td>
           </tr>
-          <tr class="bg-background rounded-lg">
+          <tr class="bg-background">
+            <td class="px-4 py-3">Instant Setup</td>
+            <td class="px-4 text-green-400 font-bold">✔ 1 Click</td>
+            <td class="px-4 text-gray-500">⚠ Manual</td>
+          </tr>
+          <tr class="bg-background">
             <td class="px-4 py-3">Auto Kick</td>
-            <td class="px-4 text-accent font-semibold">✅ Yes</td>
-            <td class="px-4 text-gray-500">🔶 Sometimes</td>
-          </tr>
-          <tr class="bg-background rounded-lg">
-            <td class="px-4 py-3">Captcha & Typing</td>
-            <td class="px-4 text-accent font-semibold">✅ Smart Test</td>
-            <td class="px-4 text-gray-500">🟡 Captcha Only</td>
-          </tr>
-          <tr class="bg-background rounded-lg">
-            <td class="px-4 py-3">Dashboard</td>
-            <td class="px-4 text-accent font-semibold">⚙️ Coming Soon</td>
-            <td class="px-4 text-gray-500">⚙️ Basic</td>
+            <td class="px-4 text-green-400 font-bold">✔ Enabled</td>
+            <td class="px-4 text-gray-500">✘ Optional</td>
           </tr>
         </tbody>
       </table>
@@ -132,36 +148,27 @@
   </section>
 
   <!-- ❓ FAQ -->
-  <section id="faq" class="bg-background text-white py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-    <div class="max-w-3xl mx-auto divide-y divide-gray-700" x-data="{ open: null }">
-      <div class="py-4 cursor-pointer" @click="open = open === 1 ? null : 1">
-        <h4 class="font-semibold flex justify-between">
-          Is Verification.bot free?
-          <span x-text="open === 1 ? '–' : '+'"></span>
-        </h4>
-        <p x-show="open === 1" class="text-gray-400 mt-2">Yes! Core verification is 100% free. Premium features are optional.</p>
+  <section class="bg-background py-20 px-6 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">FAQ</h2>
+    <div class="max-w-2xl mx-auto text-left text-gray-300 space-y-8">
+      <div>
+        <h4 class="font-semibold text-lg mb-2">Is this bot free?</h4>
+        <p>Yes. Free forever for core features. Premium available soon.</p>
       </div>
-      <div class="py-4 cursor-pointer" @click="open = open === 2 ? null : 2">
-        <h4 class="font-semibold flex justify-between">
-          Can users bypass the bot?
-          <span x-text="open === 2 ? '–' : '+'"></span>
-        </h4>
-        <p x-show="open === 2" class="text-gray-400 mt-2">No. The bot locks down @everyone and forces verification through an unskippable process.</p>
+      <div>
+        <h4 class="font-semibold text-lg mb-2">Will users get kicked?</h4>
+        <p>Yes, if they don’t pass verification in the set time.</p>
       </div>
-      <div class="py-4 cursor-pointer" @click="open = open === 3 ? null : 3">
-        <h4 class="font-semibold flex justify-between">
-          Does it support multiple servers?
-          <span x-text="open === 3 ? '–' : '+'"></span>
-        </h4>
-        <p x-show="open === 3" class="text-gray-400 mt-2">Yes. You can configure each server separately via /setup.</p>
+      <div>
+        <h4 class="font-semibold text-lg mb-2">Is it safe?</h4>
+        <p>Yes. It only manages roles, channels, and verification access.</p>
       </div>
     </div>
   </section>
 
   <!-- 🔗 Footer -->
-  <footer class="bg-surface text-center text-gray-400 py-12 px-6">
-    <p class="mb-3">© 2025 Pryo, Inc</p>
+  <footer class="bg-surface text-center text-gray-400 py-12 px-6 fade-up">
+    <p class="mb-3">© 2025 Pryo, Inc — Verification.bot</p>
     <div class="flex justify-center gap-6 text-lg">
       <a href="https://x.com/DiscordVerification" class="hover:text-white transition">🐦 Twitter</a>
       <a href="https://github.com/DiscordVerification" class="hover:text-white transition">💻 GitHub</a>
@@ -169,7 +176,5 @@
     </div>
   </footer>
 
-  <!-- AlpineJS for FAQ -->
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 </html>
